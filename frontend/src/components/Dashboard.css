@@ -1,0 +1,221 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.sidebar{
+    width: 20px;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.main-thing{
+    flex: 1;
+    width: 100%;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navigation-container{
+    height: 8vh;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 20px;
+    box-shadow: 0 2px 0px rgba(0,0,0,0.1);
+
+}
+
+.navigation-container div{
+    font-size: 24px;
+}
+.stats-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 35vh;
+}
+.wokring-path{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 6vh;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+    color: rgb(78, 78, 78);
+    margin: 10px 20px 0px 20px;
+    width: calc(100% - 40px);
+}
+.stats-heading{
+    columns: pink;
+    font-size: 22px;
+    margin: 0px 20px;
+
+}
+
+.overview-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap: 40px;
+}
+.pending, .completed, .rejected {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.1);
+}
+.pending span, .completed span, .rejected span {
+    font-size: 26px;
+    margin: 2px;
+}
+.pending p{
+    font-size: 14px;
+    color: rgb(78, 78, 78);
+    background-color: rgb(247, 196, 102);
+    padding: 8px;
+    border-radius: 20px;
+}
+.completed p{
+    font-size: 14px;
+    color: rgb(78, 78, 78);
+    background-color: rgb(112, 240, 118);
+    padding: 8px;
+    border-radius: 20px;
+}
+.rejected p{
+    font-size: 14px;
+    color: rgb(78, 78, 78);
+    background-color: rgb(250, 123, 123);
+    padding: 8px;
+    border-radius: 20px;
+}
+.table-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+    width: calc(100% - 40px);
+    font-size: 20px;
+    
+}
+
+.table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 0 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.items-container {
+  overflow-x: auto;
+  padding: 12px;
+  border-radius: 1px solid #e5e7eb;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.execution-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.execution-table thead {
+  background-color: #ffffff;
+}
+
+.execution-table th,
+.execution-table td {
+  padding: 20px 14px;
+  border: 1px solid #f8f2f2;
+  text-align: left;
+  font-size: 14px;
+
+}
+.execution-table th{
+    background-color: rgb(211, 211, 208);
+}
+
+.execution-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+
+
+
+
+
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clickable-row:hover {
+  background-color: #f3f3f3;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 24px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
